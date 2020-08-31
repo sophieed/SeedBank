@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefWidth="431.0" spacing="5.0"
+	xmlns="http://javafx.com/javafx/11.0.1"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.controllers.SowNewController">
+	<children>
+		<HBox prefHeight="169.0" prefWidth="421.0">
+			<children>
+				<GridPane prefHeight="124.0" prefWidth="421.0">
+					<columnConstraints>
+						<ColumnConstraints hgrow="SOMETIMES"
+							maxWidth="241.0" minWidth="10.0" prefWidth="140.0" />
+						<ColumnConstraints hgrow="SOMETIMES"
+							maxWidth="382.0" minWidth="10.0" prefWidth="281.0" />
+					</columnConstraints>
+					<rowConstraints>
+						<RowConstraints minHeight="10.0" prefHeight="30.0"
+							vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0"
+							vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0"
+							vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0"
+							vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0"
+							vgrow="SOMETIMES" />
+					</rowConstraints>
+					<children>
+						<Label text="Seed name:">
+							<padding>
+								<Insets left="10.0" />
+							</padding>
+						</Label>
+						<Label text="Setting:" GridPane.rowIndex="1">
+							<padding>
+								<Insets left="10.0" />
+							</padding>
+						</Label>
+						<Label text="Location:" GridPane.rowIndex="2">
+							<padding>
+								<Insets left="10.0" />
+							</padding>
+						</Label>
+						<Label text="Date sown:" GridPane.rowIndex="3">
+							<padding>
+								<Insets left="10.0" />
+							</padding>
+						</Label>
+						<Label text="Number sown:" GridPane.rowIndex="4">
+							<GridPane.margin>
+								<Insets left="10.0" />
+							</GridPane.margin>
+						</Label>
+						<ComboBox fx:id="seedComboBox" onAction="#seedSelected"
+							prefHeight="27.0" prefWidth="269.0" GridPane.columnIndex="1" />
+						<HBox prefHeight="100.0" prefWidth="200.0"
+							GridPane.columnIndex="1" GridPane.rowIndex="1">
+							<children>
+								<RadioButton fx:id="indoorsRadio"
+									mnemonicParsing="false" text="Indoors">
+									<HBox.margin>
+										<Insets left="10.0" top="8.0" />
+									</HBox.margin>
+								</RadioButton>
+								<RadioButton fx:id="outdoorsRadio"
+									mnemonicParsing="false" text="Outdoors">
+									<HBox.margin>
+										<Insets left="10.0" top="8.0" />
+									</HBox.margin>
+								</RadioButton>
+							</children>
+						</HBox>
+						<TextField fx:id="locationStored" prefHeight="27.0"
+							prefWidth="266.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+							<GridPane.margin>
+								<Insets right="10.0" />
+							</GridPane.margin>
+						</TextField>
+						<DatePicker fx:id="dateSown" prefHeight="27.0"
+							prefWidth="171.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+						<HBox prefHeight="100.0" prefWidth="200.0"
+							GridPane.columnIndex="1" GridPane.rowIndex="4">
+							<children>
+								<TextField fx:id="numberSown" prefHeight="38.0"
+									prefWidth="84.0">
+									<HBox.margin>
+										<Insets top="3.0" />
+									</HBox.margin>
+								</TextField>
+								<Label fx:id="numberRemaining" prefHeight="29.0"
+									prefWidth="119.0">
+									<HBox.margin>
+										<Insets left="10.0" top="3.0" />
+									</HBox.margin>
+								</Label>
+							</children>
+						</HBox>
+					</children>
+				</GridPane>
+			</children>
+		</HBox>
+		<HBox prefHeight="100.0" prefWidth="200.0">
+			<children>
+				<Label text="Notes:">
+					<padding>
+						<Insets left="10.0" right="94.0" />
+					</padding>
+					<HBox.margin>
+						<Insets top="15.0" />
+					</HBox.margin>
+				</Label>
+				<TextArea fx:id="notes" prefHeight="90.0" prefWidth="250.0" wrapText="true">
+					<HBox.margin>
+						<Insets top="3.0" />
+					</HBox.margin>
+				</TextArea>
+			</children>
+		</HBox>
+		<HBox fx:id="germinatedData" prefHeight="68.0" prefWidth="421.0">
+			<children>
+				<GridPane prefHeight="59.0" prefWidth="420.0">
+					<columnConstraints>
+						<ColumnConstraints hgrow="SOMETIMES"
+							maxWidth="206.0" minWidth="10.0" prefWidth="141.0" />
+						<ColumnConstraints hgrow="SOMETIMES"
+							maxWidth="321.0" minWidth="10.0" prefWidth="279.0" />
+					</columnConstraints>
+					<rowConstraints>
+						<RowConstraints minHeight="10.0" prefHeight="30.0"
+							vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0"
+							vgrow="SOMETIMES" />
+					</rowConstraints>
+					<children>
+						<Label text="Date germinated:">
+							<padding>
+								<Insets left="10.0" />
+							</padding>
+						</Label>
+						<DatePicker fx:id="dateGerminated" prefHeight="27.0"
+							prefWidth="171.0" GridPane.columnIndex="1" />
+						<Label text="Number germinated:" GridPane.rowIndex="1">
+							<padding>
+								<Insets left="10.0" />
+							</padding>
+						</Label>
+						<HBox prefHeight="100.0" prefWidth="200.0"
+							GridPane.columnIndex="1" GridPane.rowIndex="1">
+							<children>
+								<TextField fx:id="numberGerminated" prefHeight="38.0"
+									prefWidth="84.0">
+									<HBox.margin>
+										<Insets top="3.0" />
+									</HBox.margin>
+								</TextField>
+							</children>
+						</HBox>
+					</children>
+				</GridPane>
+			</children>
+			<VBox.margin>
+				<Insets top="3.0" />
+			</VBox.margin>
+		</HBox>
+		<HBox fx:id="establishedData" prefHeight="68.0" prefWidth="421.0">
+			<children>
+				<GridPane prefHeight="59.0" prefWidth="420.0">
+					<columnConstraints>
+						<ColumnConstraints hgrow="SOMETIMES"
+							maxWidth="206.0" minWidth="10.0" prefWidth="141.0" />
+						<ColumnConstraints hgrow="SOMETIMES"
+							maxWidth="321.0" minWidth="10.0" prefWidth="279.0" />
+					</columnConstraints>
+					<rowConstraints>
+						<RowConstraints minHeight="10.0" prefHeight="30.0"
+							vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0"
+							vgrow="SOMETIMES" />
+					</rowConstraints>
+					<children>
+						<Label text="Date established:">
+							<padding>
+								<Insets left="10.0" />
+							</padding>
+						</Label>
+						<DatePicker fx:id="dateEstablished" prefHeight="27.0"
+							prefWidth="171.0" GridPane.columnIndex="1" />
+						<Label text="Number established:" GridPane.rowIndex="1">
+							<padding>
+								<Insets left="10.0" />
+							</padding>
+						</Label>
+						<HBox prefHeight="100.0" prefWidth="200.0"
+							GridPane.columnIndex="1" GridPane.rowIndex="1">
+							<children>
+								<TextField fx:id="numberEstablished" prefHeight="38.0"
+									prefWidth="84.0">
+									<HBox.margin>
+										<Insets top="3.0" />
+									</HBox.margin>
+								</TextField>
+							</children>
+						</HBox>
+					</children>
+				</GridPane>
+			</children>
+		</HBox>
+		<HBox prefHeight="32.0" prefWidth="421.0"
+			spacing="5.0">
+			<children>
+				<Button fx:id="saveNewButton" mnemonicParsing="false"
+					onAction="#save" text="Save" />
+				<Button fx:id="cancelButton" cancelButton="true"
+					mnemonicParsing="false" onAction="#cancel" text="Cancel" />
+			</children>
+			<padding>
+				<Insets bottom="10.0" left="10.0" top="10.0" />
+			</padding>
+		</HBox>
+	</children>
+	<padding>
+		<Insets left="10.0" top="10.0" />
+	</padding>
+</VBox>

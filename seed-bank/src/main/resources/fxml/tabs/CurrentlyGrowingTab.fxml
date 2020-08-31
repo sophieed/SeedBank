@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+
+<Tab text="Grow" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.controllers.CurrentlyGrowingTabController">
+	<content>
+		<VBox fx:id="currentlyGrowingBox">
+			<children>
+				<HBox prefHeight="250.0" prefWidth="980.0">
+					<children>
+						<VBox prefHeight="422.0" prefWidth="300.0">
+							<children>
+								<Label text="Sown indoors">
+									<padding>
+										<Insets bottom="10.0" left="10.0" top="10.0" />
+									</padding>
+									<VBox.margin>
+										<Insets top="10.0" />
+									</VBox.margin>
+								</Label>
+								<TableView fx:id="sownIndoorsTable" prefHeight="200.0"
+									prefWidth="300.0">
+									<columns>
+										<TableColumn fx:id="sownIndoorsSeedColumn"
+											prefWidth="180.0" resizable="false" text="Name" />
+										<TableColumn minWidth="0.0" prefWidth="100.0"
+											resizable="false" text="Date" />
+									</columns>
+									<VBox.margin>
+										<Insets left="10.0" right="5.0" />
+									</VBox.margin>
+								</TableView>
+							</children>
+						</VBox>
+						<Button fx:id="progressIndoorsPhase1"
+							mnemonicParsing="false" text="&gt;" onAction="#progress">
+							<HBox.margin>
+								<Insets top="120.0" />
+							</HBox.margin>
+						</Button>
+						<VBox prefHeight="254.0" prefWidth="300.0">
+							<children>
+								<Label text="Germinated indoors">
+									<padding>
+										<Insets bottom="10.0" left="10.0" top="10.0" />
+									</padding>
+									<VBox.margin>
+										<Insets top="10.0" />
+									</VBox.margin>
+								</Label>
+								<TableView fx:id="germinatedIndoorsTable"
+									prefHeight="200.0" prefWidth="300.0">
+									<columns>
+										<TableColumn fx:id="germinatedIndoorsSeedColumn"
+											prefWidth="180.0" resizable="false" text="Name" />
+										<TableColumn minWidth="0.0" prefWidth="100.0"
+											resizable="false" text="Date" />
+									</columns>
+									<VBox.margin>
+										<Insets left="7.5" right="7.5" />
+									</VBox.margin>
+								</TableView>
+							</children>
+						</VBox>
+						<Button fx:id="progressIndoorsPhase2"
+							mnemonicParsing="false" text="&gt;" onAction="#progress">
+							<HBox.margin>
+								<Insets top="120.0" />
+							</HBox.margin>
+						</Button>
+						<VBox prefHeight="422.0" prefWidth="300.0">
+							<children>
+								<Label text="Established indoors">
+									<padding>
+										<Insets bottom="10.0" left="10.0" top="10.0" />
+									</padding>
+									<VBox.margin>
+										<Insets top="10.0" />
+									</VBox.margin>
+								</Label>
+								<TableView fx:id="establishedIndoorsTable"
+									prefHeight="200.0" prefWidth="300.0">
+									<columns>
+										<TableColumn fx:id="establishedIndoorsSeedColumn"
+											prefWidth="180.0" resizable="false" text="Name" />
+										<TableColumn minWidth="0.0" prefWidth="100.0"
+											resizable="false" text="Date" />
+									</columns>
+									<VBox.margin>
+										<Insets left="5.0" right="10.0" />
+									</VBox.margin>
+								</TableView>
+							</children>
+						</VBox>
+					</children>
+				</HBox>
+				<HBox prefHeight="250.0" prefWidth="980.0">
+					<children>
+						<VBox prefHeight="422.0" prefWidth="300.0">
+							<children>
+								<Label text="Sown outdoors">
+									<padding>
+										<Insets bottom="10.0" left="10.0" top="10.0" />
+									</padding>
+									<VBox.margin>
+										<Insets top="10.0" />
+									</VBox.margin>
+								</Label>
+								<TableView fx:id="sownOutdoorsTable"
+									prefHeight="200.0" prefWidth="300.0">
+									<columns>
+										<TableColumn fx:id="sownOutdoorsSeedColumn"
+											prefWidth="180.0" resizable="false" text="Name" />
+										<TableColumn minWidth="0.0" prefWidth="100.0"
+											resizable="false" text="Date" />
+									</columns>
+									<VBox.margin>
+										<Insets left="10.0" right="5.0" />
+									</VBox.margin>
+								</TableView>
+							</children>
+						</VBox>
+						<Button fx:id="progressOutdoorsPhase1" onAction="#progress"
+							mnemonicParsing="false" text="&gt;">
+							<HBox.margin>
+								<Insets top="120.0" />
+							</HBox.margin>
+						</Button>
+						<VBox prefHeight="254.0" prefWidth="300.0">
+							<children>
+								<Label text="Germinated outdoors">
+									<padding>
+										<Insets bottom="10.0" left="10.0" top="10.0" />
+									</padding>
+									<VBox.margin>
+										<Insets top="10.0" />
+									</VBox.margin>
+								</Label>
+								<TableView fx:id="germinatedOutdoorsTable"
+									prefHeight="200.0" prefWidth="200.0">
+									<columns>
+										<TableColumn fx:id="germinatedOutdoorsSeedColumn"
+											prefWidth="180.0" resizable="false" text="Name" />
+										<TableColumn minWidth="0.0" prefWidth="100.0"
+											resizable="false" text="Date" />
+									</columns>
+									<VBox.margin>
+										<Insets left="7.5" right="7.5" />
+									</VBox.margin>
+								</TableView>
+							</children>
+						</VBox>
+						<Button fx:id="progressOutdoorsPhase2"
+							mnemonicParsing="false" text="&gt;" onAction="#progress">
+							<HBox.margin>
+								<Insets top="120.0" />
+							</HBox.margin>
+						</Button>
+						<VBox prefHeight="422.0" prefWidth="300.0">
+							<children>
+								<Label text="Established outdoors">
+									<padding>
+										<Insets bottom="10.0" left="10.0" top="10.0" />
+									</padding>
+									<VBox.margin>
+										<Insets top="10.0" />
+									</VBox.margin>
+								</Label>
+								<TableView fx:id="establishedOutdoorsTable"
+									prefHeight="200.0" prefWidth="300.0">
+									<columns>
+										<TableColumn fx:id="establishedOutdoorsSeedColumn"
+											prefWidth="180.0" resizable="false" text="Name" />
+										<TableColumn minWidth="0.0" prefWidth="100.0"
+											resizable="false" text="Date" />
+									</columns>
+									<VBox.margin>
+										<Insets left="5.0" right="10.0" />
+									</VBox.margin>
+								</TableView>
+							</children>
+						</VBox>
+					</children>
+				</HBox>
+				<AnchorPane>
+					<children>
+						<HBox>
+							<children>
+								<ButtonBar prefHeight="40.0">
+									<buttons>
+										<Button fx:id="sowNewButton" mnemonicParsing="false"
+											text="Sow New" onAction="#sowNew" />
+										<Button fx:id="editCurrentlyGrowingRecordButton"
+											mnemonicParsing="false" text="Edit" onAction="#edit" />
+										<Button fx:id="viewSowingButton"
+											mnemonicParsing="false" text="Sowing Info"
+											onAction="#viewSowingDetails" />
+										<Button fx:id="viewSeedInfoButton"
+											mnemonicParsing="false" text="Seed Info"
+											onAction="#viewSeedInfo" />
+										<Button fx:id="finishButton" mnemonicParsing="false"
+											text="Finished" onAction="#finish" />
+										<Button fx:id="failButton" mnemonicParsing="false"
+											text="Failed" onAction="#fail" />
+									</buttons>
+								</ButtonBar>
+							</children>
+						</HBox>
+					</children>
+					<VBox.margin>
+						<Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+					</VBox.margin>
+				</AnchorPane>
+			</children>
+		</VBox>
+	</content>
+</Tab>

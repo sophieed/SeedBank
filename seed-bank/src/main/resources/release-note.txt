@@ -1,0 +1,40 @@
+SeedBank Release Notes
+
+Current Release Number : 
+   2.2.0 [see end of file for latest changes]
+Release Date : 
+   16/04/2020
+
+This file accompanies the latest release of the SeedBank personal 
+seed packet management application, and tracks changes since the 
+release of version 2.2.0 
+
+Please direct bug reports, questions, or comments to:
+
+    sophie.edgarandrews@gmail.com
+
+What's new in SeedBank 2.2?  
+=========================
+
+(1) It is now possible to store information about seed packets that 
+	have been sown. The user is able to record the date, number, and 
+	location of any seeds stored, as well as leaving accompanying 
+	notes.
+
+(2) 'Currently Growing' records can be progressed to indicate whether 
+	the seeds have successfully germinated, and subsequently become 
+	established. The date and number of seeds can be manually 
+	specified, or defaulted based on the current date and number of 
+	seeds initially sown, respectively. Shortcuts support 'Quick 
+	Progress' with default values used.
+
+(3) The 'Currently Growing' records for seeds that have been sown 
+	indoors can be updated to reflect 'planting out', and the location 
+	of the record will be updated accordingly.
+
+(4)	Bug fixes.
+
+
+Change log for minor revisions:
+
+2.2.1 - Improved validation on numeric inputs

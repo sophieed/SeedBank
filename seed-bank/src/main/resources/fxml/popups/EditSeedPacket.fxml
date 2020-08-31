@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity"
+	minHeight="-Infinity" minWidth="-Infinity" prefHeight="605.0"
+	prefWidth="700.0" styleClass="editView"
+	xmlns="http://javafx.com/javafx/11.0.1"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.controllers.EditSeedPacketController">
+	<children>
+		<Label text="Properties">
+			<font>
+				<Font size="24.0" />
+			</font>
+			<VBox.margin>
+				<Insets left="10.0" top="10.0" />
+			</VBox.margin>
+		</Label>
+		<GridPane hgap="15.0" vgap="15.0">
+			<columnConstraints>
+				<ColumnConstraints hgrow="SOMETIMES"
+					minWidth="10.0" prefWidth="100.0" />
+				<ColumnConstraints hgrow="SOMETIMES"
+					minWidth="10.0" prefWidth="200.0" />
+				<ColumnConstraints hgrow="SOMETIMES"
+					minWidth="10.0" prefWidth="100.0" />
+				<ColumnConstraints hgrow="SOMETIMES"
+					minWidth="10.0" prefWidth="150.0" />
+			</columnConstraints>
+			<rowConstraints>
+				<RowConstraints minHeight="10.0" prefHeight="30.0"
+					vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0"
+					vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0"
+					vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0"
+					vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0"
+					vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0"
+					vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0"
+					vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0"
+					vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0"
+					vgrow="SOMETIMES" />
+			</rowConstraints>
+			<children>
+				<Label text="Name:" />
+				<Label text="Latin Name:" GridPane.rowIndex="1" />
+				<Label text="Type:" GridPane.rowIndex="2" />
+				<Label text="Variety:" GridPane.rowIndex="3" />
+				<Label text="Manufacturer:" GridPane.rowIndex="4" />
+				<Label text="Manufacturer Code:" GridPane.rowIndex="5" />
+				<Label text="Pack Size:" GridPane.rowIndex="6" />
+				<Label text="Number Remaining:" GridPane.rowIndex="7" />
+				<Label text="Expiration Year:" GridPane.rowIndex="8" />
+				<Label text="Sow Indoors From:" GridPane.columnIndex="2" />
+				<Label text="Sow Indoors Until:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+				<Label text="Sow Outdoors From:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+				<Label text="Sow Outdoors Until:" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+				<Label text="Harvest From:" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+				<Label text="Harvest Until:" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+				<Label text="Flowering From:" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+				<Label text="Flowering Until:" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+							
+				<TextField fx:id="name" GridPane.columnIndex="1" />
+				<TextField fx:id="latinName" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+				<ComboBox fx:id="typeCombo" minWidth="220" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+				<TextField fx:id="variety" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+				<ComboBox  fx:id="manufacturerCombo" minWidth="220" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+				<TextField fx:id="manufacturerCode" maxWidth="150" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+				<TextField fx:id="packSize" maxWidth="50" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+				<TextField fx:id="numberRemaining" maxWidth="50" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+				<TextField fx:id="expirationDate" maxWidth="70" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+				
+				<ComboBox fx:id="sowingIndoorFromCombo" prefWidth="150.0" GridPane.columnIndex="3" />
+				<ComboBox fx:id="sowingIndoorUntilCombo" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+				<ComboBox fx:id="sowingOutdoorFromCombo" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+				<ComboBox fx:id="sowingOutdoorUntilCombo" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+				<ComboBox fx:id="harvestFromCombo" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+				<ComboBox fx:id="harvestUntilCombo" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+				<ComboBox fx:id="floweringFromCombo" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+				<ComboBox fx:id="floweringUntilCombo" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+	
+			</children>
+			<VBox.margin>
+				<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+			</VBox.margin>
+			<padding>
+				<Insets bottom="10.0" top="10.0" />
+			</padding>
+			<opaqueInsets>
+				<Insets />
+			</opaqueInsets>
+		</GridPane>
+		<HBox prefHeight="177.0" prefWidth="580.0" spacing="10.0">
+			<children>
+				<Label text="Description:" />
+				<TextArea fx:id="description" prefHeight="42.0" prefWidth="386.0" wrapText="true"  />
+			</children>
+			<VBox.margin>
+				<Insets left="10.0" right="10.0" />
+			</VBox.margin>
+			<padding>
+				<Insets bottom="10.0" top="20.0" />
+			</padding>
+		</HBox>
+		<VBox prefHeight="0.0" prefWidth="600.0">
+			<children>
+				<Label text="Keywords:">
+					<padding>
+						<Insets left="10.0" />
+					</padding>
+				</Label>
+				<TextArea fx:id="keywords" prefHeight="0.0" prefWidth="580.0" >
+					<VBox.margin>
+						<Insets bottom="10.0" left="10.0" right="10.0" top="5.0" />
+					</VBox.margin>
+				</TextArea>
+			</children>
+			<VBox.margin>
+				<Insets top="10.0" />
+			</VBox.margin>
+		</VBox>
+		<HBox prefHeight="100.0" prefWidth="600.0" spacing="10.0">
+			<children>
+				<Button fx:id="saveButton" mnemonicParsing="false" prefWidth="60.0" text="Save" onAction="#save" />
+				<Button fx:id="cancelButton" mnemonicParsing="false" prefWidth="60.0" text="Cancel" onAction="#cancel" />
+			</children>
+			<VBox.margin>
+				<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+			</VBox.margin>
+		</HBox>
+	</children>
+</VBox>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+
+<Tab text="Seed Library"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.controllers.RepositoryTabController">
+	<content>
+		<VBox>
+			<children>
+				<AnchorPane maxWidth="1.7976931348623157E308"
+					minHeight="0.0" minWidth="0.0" prefHeight="691.0" prefWidth="996.0"
+					VBox.vgrow="ALWAYS">
+					<children>
+						<GridPane maxHeight="-Infinity" maxWidth="-Infinity"
+							minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0"
+							prefWidth="935.0" xmlns:fx="http://javafx.com/fxml/1"
+							xmlns="http://javafx.com/javafx/11.0.1">
+							<columnConstraints>
+								<ColumnConstraints hgrow="ALWAYS"
+									minWidth="10.0" prefWidth="100.0" />
+							</columnConstraints>
+							<rowConstraints>
+								<RowConstraints minHeight="10.0"
+									prefHeight="30.0" vgrow="ALWAYS" />
+							</rowConstraints>
+							<children>
+								<TableView fx:id="seedPacketTable" prefHeight="400.0" prefWidth="400.0"
+									GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+									<columns>
+										<TableColumn fx:id="nameColumn" prefWidth="180.0" text="Name" />
+										<TableColumn fx:id="typeColumn" prefWidth="150.0" text="Type" />
+										<TableColumn fx:id="sowIndoorsColumn" prefWidth="150.0" text="Sow Indoors">
+											<columns>
+												<TableColumn fx:id="sowIndoorsFromColumn" prefWidth="75.0" text="From" />
+												<TableColumn fx:id="sowIndoorsUntilColumn" prefWidth="75.0" text="Until" />
+											</columns>
+										</TableColumn>
+										<TableColumn fx:id="sowOutdoorsColumn" prefWidth="150.0" text="Sow Outdoors">
+											<columns>
+												<TableColumn fx:id="sowOutdoorsFromColumn" prefWidth="75.0" text="From" />
+												<TableColumn fx:id="sowOutdoorsUntilColumn" prefWidth="75.0" text="Until" />
+											</columns>
+										</TableColumn>
+										<TableColumn fx:id="harvestColumn" prefWidth="150.0" text="Harvest">
+											<columns>
+												<TableColumn fx:id="harvestFromColumn" prefWidth="75.0" text="From" />
+												<TableColumn fx:id="harvestUntilColumn" prefWidth="75.0" text="Until" />
+											</columns>
+										</TableColumn>
+										<TableColumn fx:id="floweringColumn" prefWidth="150.0" text="Flowering">
+											<columns>
+												<TableColumn fx:id="floweringFromColumn" prefWidth="75.0" text="From" />
+												<TableColumn fx:id="floweringUntilColumn" prefWidth="75.0" text="Until" />
+											</columns>
+										</TableColumn>
+									</columns>
+								</TableView>
+							</children>
+						</GridPane>
+					</children>
+
+					<VBox.margin>
+						<Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+					</VBox.margin>
+				</AnchorPane>
+
+				<AnchorPane prefHeight="31.0" prefWidth="1086.0">
+					<children>
+						<HBox maxHeight="-Infinity" maxWidth="-Infinity"
+							minHeight="-Infinity" minWidth="-Infinity" prefHeight="38.0"
+							prefWidth="347.0" xmlns="http://javafx.com/javafx/11.0.1"
+							xmlns:fx="http://javafx.com/fxml/1">
+							<children>
+								<ButtonBar prefHeight="40.0" prefWidth="200.0">
+									<buttons>
+										<Button fx:id="addButton" mnemonicParsing="false" text="Add New" />
+										<Button fx:id="viewButton" mnemonicParsing="false" text="View" />
+										<Button fx:id="editButton" mnemonicParsing="false" text="Edit" />
+										<Button fx:id="deleteButton" mnemonicParsing="false" text="Delete" />
+									</buttons>
+								</ButtonBar>
+							</children>
+						</HBox>
+					</children>
+					<VBox.margin>
+						<Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+					</VBox.margin>
+				</AnchorPane>
+			</children>
+		</VBox>
+	</content>
+</Tab>
